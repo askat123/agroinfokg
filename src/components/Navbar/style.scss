@@ -1,0 +1,43 @@
+// src/components/style.scss
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  left: 0;
+  z-index: 10;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); // Subtle shadow for depth
+  padding: 26px 0;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+  }
+
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #3baf36; // Green color similar to the logo in the image
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 20px;
+
+    a {
+      color: #333;
+      font-size: 16px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: color 0.3s;
+
+      &:hover {
+        color: #e84e3c; // Matches the button hover color in the image
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -1,0 +1,171 @@
+// style.scss
+
+.home {
+  font-family: Arial, sans-serif;
+  color: #333;
+
+  // Hero section
+  .hero {
+    background: url("../../assets/pexels-quang-nguyen-vinh-222549-2884905.jpg")
+      no-repeat center center/cover;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: #fff;
+
+    .overlay {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 2rem;
+      text-align: center;
+      border-radius: 8px;
+
+      h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+      }
+
+      p {
+        font-size: 1.2rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .hero-button {
+        background-color: #ff5722;
+        border: none;
+        color: #fff;
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #e64a19;
+        }
+      }
+    }
+  }
+
+  // Categories section
+  .categories {
+    padding: 2rem;
+    text-align: center;
+
+    h2 {
+      font-size: 2rem;
+      color: #333;
+      margin-bottom: 1.5rem;
+    }
+
+    .grid {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+
+      .card {
+        background-color: #e0f7fa;
+        padding: 1.5rem;
+        border-radius: 8px;
+        width: 300px;
+        height: 300px;
+        text-align: left;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        img {
+          width: 100%;
+          height: 70%;
+          object-fit: cover;
+        }
+        &:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        h3 {
+          font-size: 1.5rem;
+          margin-bottom: 0.5rem;
+          color: #00796b;
+        }
+
+        p {
+          font-size: 1rem;
+          color: #333;
+        }
+      }
+    }
+  }
+
+  // News section
+  .news {
+    background-color: #f1f1f1;
+    padding: 2rem;
+    text-align: center;
+
+    h2 {
+      font-size: 2rem;
+      color: #333;
+      margin-bottom: 1.5rem;
+    }
+
+    .grid {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+
+      .news-item {
+        background-color: #ffffff;
+        padding: 1.5rem;
+        border-radius: 8px;
+        width: 300px;
+        text-align: left;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+        h4 {
+          font-size: 1.2rem;
+          margin-bottom: 0.5rem;
+          color: #00796b;
+        }
+
+        p {
+          font-size: 0.9rem;
+          color: #666;
+        }
+      }
+    }
+  }
+
+  // Contact section
+  .contact {
+    padding: 2rem;
+    text-align: center;
+    background-color: #e0f7fa;
+
+    h2 {
+      font-size: 2rem;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-button {
+      background-color: #00796b;
+      border: none;
+      color: #fff;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #004d40;
+      }
+    }
+  }
+}

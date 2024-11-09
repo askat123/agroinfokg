@@ -1,0 +1,195 @@
+// src/pages/PlantsCatalog.scss
+
+.catalog {
+  background-color: #1a1a1a;
+  color: #f5f5f5;
+  padding: 40px;
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #f5f5f5;
+    margin-bottom: 30px;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+    color: #9ac27e;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #9ac27e;
+    padding-bottom: 10px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .card {
+    background-color: #333;
+    border: 1px solid #444;
+    padding: 10px;
+    width: 400px;
+    height: 390px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    img {
+      width: 80%;
+      height: 45%;
+      object-fit: cover;
+    }
+
+    h4 {
+      font-size: 1.2rem;
+      color: #9ac27e;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #ccc;
+      font-size: 0.9rem;
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+
+    .button {
+      background-color: #9ac27e;
+      color: #1a1a1a;
+      padding: 8px 16px;
+      font-size: 0.9rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: #7ea165;
+      }
+    }
+  }
+}
+
+// Стили для модального окна
+// src/pages/PlantDetails.scss
+
+.plant-details-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  animation: fadeInOverlay 0.3s ease;
+}
+
+@keyframes fadeInOverlay {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.plant-details {
+  background-color: #1a1a1a;
+  color: #f5f5f5;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  max-height: 80vh;
+  overflow-y: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  animation: slideIn 0.4s ease;
+
+  // Стилизация прокрутки
+  ::-webkit-scrollbar {
+    width: 8px; // Ширина полосы прокрутки
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: #333; // Цвет фона полосы прокрутки
+    border-radius: 10px; // Радиус скругления фона
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: #9ac27e; // Цвет "ползунка" прокрутки
+    border-radius: 10px; // Радиус скругления "ползунка"
+    border: 2px solid #333; // Отступ вокруг "ползунка"
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #7ea165; // Цвет "ползунка" при наведении
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: scale(0.7);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    color: #9ac27e;
+    margin-bottom: 15px;
+  }
+
+  .image {
+    width: 90%;
+    height: 90%;
+    border-radius: 4px;
+    margin: 15px 0;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    color: #9ac27e;
+    margin: 10px 0;
+  }
+
+  p {
+    color: #ccc;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+  }
+
+  .button {
+    background-color: #9ac27e;
+    color: #1a1a1a;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #7ea165;
+    }
+  }
+}
